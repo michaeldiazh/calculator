@@ -1,9 +1,11 @@
 package com.diazmic.calculator.calculation;
 
 import com.diazmic.calculator.calculation.interfaces.Calculable;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
+@Component
 public class DoubleCalculator implements Calculable<Double> {
 
     public static final DoubleCalculator doubleCalculator = new DoubleCalculator();

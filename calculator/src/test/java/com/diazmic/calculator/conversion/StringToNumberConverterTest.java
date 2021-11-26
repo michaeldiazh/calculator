@@ -2,7 +2,6 @@ package com.diazmic.calculator.conversion;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.mockito.internal.matchers.Null;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest

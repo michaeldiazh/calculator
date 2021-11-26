@@ -124,14 +124,14 @@ public class DoubleCalculatorTest {
     // Test 5.2: If one input is a number  and other is Null, then throw IllegalArgumentException.
     @Test
     public void Test_5_2_First_Input_Is_Null_Throw_IllegalArgumentException(){
-        Exception exception = Assertions.assertThrows(IllegalArgumentException.class,() ->testDoubleCalculable.calculate(null,Mockito.anyDouble(),"*"));
+        Exception exception = Assertions.assertThrows(IllegalArgumentException.class,() ->testDoubleCalculable.calculate(null,12.3,"*"));
         Assertions.assertEquals(exception.getMessage(),"First Number is null. Please evaluate input.");
     }
 
     // Test 5.3: If one input is Null and other is number, then throw IllegalArgumentException.
     @Test
     public void Test_5_3_Second_Input_Is_Null_Throw_IllegalArgumentException(){
-        Exception exception = Assertions.assertThrows(IllegalArgumentException.class,() ->testDoubleCalculable.calculate(Mockito.anyDouble(),null,"*"));
+        Exception exception = Assertions.assertThrows(IllegalArgumentException.class,() ->testDoubleCalculable.calculate(421.3,null,"*"));
         Assertions.assertEquals(exception.getMessage(),"Second Number is null. Please evaluate input.");
     }
 }

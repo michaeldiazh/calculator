@@ -4,9 +4,10 @@ import java.util.Comparator;
 import java.util.HashMap;
 
 public class OperatorComparator implements Comparator<Character>{
-    public final OperatorComparator operatorComparator = new OperatorComparator();
+    public final static OperatorComparator operatorComparator = new OperatorComparator();
     private HashMap<Character,Short> operatorMap = new HashMap<>();
     public OperatorComparator(){
+        operatorMap.put('(',(short)-1);
         operatorMap.put('-',(short)0);
         operatorMap.put('+',(short)1);
         operatorMap.put('/',(short)2);
