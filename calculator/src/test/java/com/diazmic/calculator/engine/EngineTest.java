@@ -64,7 +64,7 @@ public class EngineTest {
     @Test
     public void Test_1_5_IntermediateExpression_With_TwoNegativeNumbersInBeginningAndEnd_Return_Postfix_Array(){
         String[] expectArray = {"-2","3.5","6","*","+","-5","4","-7","*","+","-"};
-        String[] actualArray = testEngine.convertForCalculation(new String[]{"-","2","+","3.5","*","6","-","-","5","+","4","*","-7"});
+        String[] actualArray = testEngine.convertForCalculation(new String[]{"-","2","+","3.5","*","6","-","-","5","+","4","*","-","7"});
         arrayChecker(expectArray,actualArray);
     }
 

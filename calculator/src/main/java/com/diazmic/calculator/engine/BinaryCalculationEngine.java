@@ -103,9 +103,11 @@ public class BinaryCalculationEngine implements CalculatorEngine {
                 if (pushedNumber) {
                     // If Operation Stack is not empty and the top operator has more priority then the token
                     if(!operationStack.isEmpty() && currOperationBigger(operationStack.peek(), token.charAt(0))) {
-                            while (!operationStack.isEmpty()) {
+                            while (!operationStack.isEmpty() && currOperationBigger(operationStack.peek(), token.charAt(0))) {
                                 postFixStack.push(operationStack.pop().toString());
                         }
+
+
                     }
                 }
                 //If we did not push number before

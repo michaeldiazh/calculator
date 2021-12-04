@@ -8,10 +8,10 @@ public class OperatorComparator implements Comparator<Character>{
     private HashMap<Character,Short> operatorMap = new HashMap<>();
     public OperatorComparator(){
         operatorMap.put('(',(short)-1);
-        operatorMap.put('-',(short)0);
+        operatorMap.put('-',(short)1);
         operatorMap.put('+',(short)1);
         operatorMap.put('/',(short)2);
-        operatorMap.put('*',(short)3);
+        operatorMap.put('*',(short)2);
     }
 
     @Override
