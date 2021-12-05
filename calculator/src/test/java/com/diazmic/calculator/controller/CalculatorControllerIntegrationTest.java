@@ -38,4 +38,13 @@ public class CalculatorControllerIntegrationTest {
         Assertions.assertEquals(-4.0,testController.calculate("-2+3.5*6--5+4*-7"));
     }
 
+    @Test
+    public void Test_1_5_ExpressionSix(){
+        Assertions.assertEquals(-4.0,testController.calculate("((-3+2)+3)*4-(6*2)"));
+    }
+
+    @Test
+    public void Test_1_6_ExpressionSeven(){
+        Assertions.assertEquals(3.0,testController.calculate("1+2"));
+    }
 }
