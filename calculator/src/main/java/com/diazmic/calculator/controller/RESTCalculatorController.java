@@ -10,11 +10,19 @@ public class RESTCalculatorController {
     @Autowired
     private CalculatorController calculatorController;
 
-    @GetMapping(value = "/calculate")
+    @CrossOrigin(origins = "http://localhost:8080")
+    @PostMapping(value = "/calculate")
     @ResponseBody
-    public double calculateExpression(@RequestBody Map<String,String> expression){
-        double answer = calculatorController.calculate(expression.get("expression"));
-        System.out.println(answer);
+    public String calculateExpression(@RequestBody Map<String,String> expression){
+        String answer;
+        try {
+            answer =String.valueOf(calculatorController.calculate(expression.get("expression")));
+            System.out.println(answer);
+            return answer;
+        }
+        catch (Exception e){
+            answer = "Cannot Compute Expression";
+        }
         return answer;
     }
 }
